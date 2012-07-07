@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreatePlaylistViewController : UIViewController
+@interface CreatePlaylistViewController : UIViewController <UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
+- (IBAction)cancelButtonTapped:(id)sender;
 
+- (IBAction)createButtonTapped:(id)sender;
 @end
