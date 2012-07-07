@@ -1,2 +1,0 @@
-# curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"uuid": "123", "deezer_id": "3135556", "title": "Daft Punk - Bla"}' http://192.168.2.225:8000/party/219312831/add_song/
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"name": "Party Hard", "address": "Kurfürstendamm, Berlin", "longitude": "13.307962", "latitude": "52.500914" }' http://192.168.2.225:8000/party/create/
