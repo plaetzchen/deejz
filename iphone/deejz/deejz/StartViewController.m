@@ -10,6 +10,7 @@
 #import "ReceiverViewController.h"
 #import "SenderViewController.h"
 #import "DeezerSession.h"
+#import "CreatePlaylistViewController.h"
 
 @implementation StartViewController
 @synthesize partiesTable,loggedIn;
@@ -82,9 +83,8 @@
 
 - (IBAction)createPartyTapped:(id)sender {
     if (self.loggedIn){
-        ReceiverViewController *receiverVC = [[ReceiverViewController alloc]initWithNibName:@"ReceiverViewController" bundle:[NSBundle mainBundle]];
-        receiverVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        [self presentModalViewController:receiverVC animated:YES];
+        CreatePlaylistViewController *createVC = [[CreatePlaylistViewController alloc]initWithNibName:@"CreatePlaylistViewController" bundle:[NSBundle mainBundle]];
+        [self presentModalViewController:createVC animated:YES];
     }
     else {
         [[DeezerSession sharedSession] connectToDeezerWithPermissions:[NSArray arrayWithObjects:@"basic_access",@"manage_library", nil]];
@@ -93,9 +93,9 @@
 
 - (void)deezerSessionDidConnect {
     [self setLoggedIn:YES];
-    ReceiverViewController *receiverVC = [[ReceiverViewController alloc]initWithNibName:@"ReceiverViewController" bundle:[NSBundle mainBundle]];
-    receiverVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentModalViewController:receiverVC animated:YES];
+    CreatePlaylistViewController *createVC = [[CreatePlaylistViewController alloc]initWithNibName:@"CreatePlaylistViewController" bundle:[NSBundle mainBundle]];
+    [self presentModalViewController:createVC animated:YES];
+
 }
 
 - (void)deezerSessionDidDisconnect {

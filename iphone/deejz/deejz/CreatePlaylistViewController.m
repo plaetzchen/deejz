@@ -7,12 +7,15 @@
 //
 
 #import "CreatePlaylistViewController.h"
+#import "ReceiverViewController.h"
+#import "DeezerSession.h"
 
 @interface CreatePlaylistViewController ()
 
 @end
 
 @implementation CreatePlaylistViewController
+@synthesize nameTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +34,7 @@
 
 - (void)viewDidUnload
 {
+    [self setNameTextField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -41,4 +45,23 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)cancelButtonTapped:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (IBAction)createButtonTapped:(id)sender {
+    [[DeezerSession sharedSession] createPlaylistNamed:[nameTextField text] forUser:@"me"];
+    
+    ReceiverViewController *receiverVC = [[ReceiverViewController alloc]initWithNibName:@"ReceiverViewController" bundle:[NSBundle mainBundle]];
+    receiverVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:receiverVC animated:YES];
+
+}
+
+# pragma mark UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [nameTextField resignFirstResponder];
+    return YES;
+}
 @end
