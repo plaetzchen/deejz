@@ -38,7 +38,10 @@ def add_song(request, party_slug):
 	try:
 		data = json.loads(request.raw_post_data)
 		fete = PartyPlaylist.objects.get(slug=party_slug)
-		song = Song(party=fete, added_by_uuid=data['uuid'], deezer_id=data['deezer_id'])
+		song = Song(party=fete, 
+			added_by_uuid=data['uuid'], 
+			deezer_id=data['deezer_id'],
+			title=data['title'])
 		song.save()
 	except KeyError, e:
 		print e
