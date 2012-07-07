@@ -1,5 +1,4 @@
 Django==1.4
-Jinja2==2.6
 Markdown==2.1.1
 PyYAML==3.10
 Pygments==1.5
@@ -14,5 +13,4 @@ psycopg2==2.4.5
 pycrypto==2.6
 simplejson==2.6.0
 smartypants==1.6.0.3
-typogrify-hyde==1.0.1a
 wsgiref==0.1.2
