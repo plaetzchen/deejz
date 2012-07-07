@@ -12,12 +12,13 @@ urlpatterns = patterns('',
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-	url(r'^party\/(?P<party_slug>\d+)/$', 'party.views.party'),
-	url(r'^party\/(?P<party_slug>\d+)/playlist\.json$', 'party.views.playlist_json'),
-	url(r'^party\/(?P<party_slug>\d+)/details\.json$', 'party.views.details_json'),
-	url(r'^party\/(?P<party_slug>\d+)/add_song/$', 'party.views.add_song'),
-	url(r'^party\/(?P<party_slug>\d+)/next_song\.json$', 'party.views.get_next_song'),
-	url(r'^party\/(?P<party_slug>\d+)/current_song\.json/$', 'party.views.get_current_song'),
+	url(r'^party/create/$', 'party.views.create_party'),
+	url(r'^party\/(?P<party_slug>\w+)/$', 'party.views.party'),
+	url(r'^party\/(?P<party_slug>\w+)/playlist\.json$', 'party.views.playlist_json'),
+	url(r'^party\/(?P<party_slug>\w+)/details\.json$', 'party.views.details_json'),
+	url(r'^party\/(?P<party_slug>\w+)/add_song/$', 'party.views.add_song'),
+	url(r'^party\/(?P<party_slug>\w+)/next_song\.json$', 'party.views.get_next_song'),
+	url(r'^party\/(?P<party_slug>\w+)/current_song\.json$', 'party.views.get_current_song'),
 	
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),

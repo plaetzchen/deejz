@@ -3,9 +3,9 @@
   fields:
     name: "BeMyApp Deezer, Berlin"
     address: "Windscheidstraße 18, 10627 Berlin"
-    slug: 219312831
-    longitude: 52.505733
-    latitude: 13.299347
+    slug: deadbeef
+    longitude: 13.299347
+    latitude: 52.505733
 - model: party.Song
   pk: 1
   fields:
