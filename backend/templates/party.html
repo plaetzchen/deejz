@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block container %}
+<div class="row">
+	<div class="span4">
+		<h1>{{ party.name }}</h1>
+		<address>{{ party.address }}</address>
+	</div>
+	<div class="span8">
+		Map goes here
+	</div>
+</div>
+<div class="row">
+	<div class="span12">
+	<table class="table">
+		<theader>
+			<tr>
+				<td>Artist - Title</td>
+				<td>Played at</td>
+			</tr>
+		</theader>
+		<tbody>
+			{% for song in songs %}
+			<tr>
+				<td>{{ song.title }}</td>
+				<td>
+					{% if song.played %}
+						{{ song.played }}
+					{% else %}
+						not yet
+					{% endif %}
+				</td>
+			</tr>
+			{% endfor %} 
+		</tbody>
+	</table>
+	</div>
+{% endblock %}

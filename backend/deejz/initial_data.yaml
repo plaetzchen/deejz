@@ -1,0 +1,20 @@
+- model: party.PartyPlaylist
+  pk: 1
+  fields:
+    name: "BeMyApp Deezer, Berlin"
+    address: "Windscheidstraße 18, 10627 Berlin"
+    slug: 219312831
+    longitude: 52.505733
+    latitude: 13.299347
+- model: party.Song
+  pk: 1
+  fields:
+      party: 1
+      deezer_id: 3135556
+      title: Daft Punk - Harder Better Faster Stronger
+- model: party.Song
+  pk: 2
+  fields:
+    party: 1
+    deezer_id: 302127
+    title: Daft Punk - Discovery
