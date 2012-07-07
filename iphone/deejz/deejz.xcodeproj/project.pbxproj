@@ -1,0 +1,849 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B45EED9515A79A6F0052F005 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45EED9415A79A6F0052F005 /* UIKit.framework */; };
+		B45EED9715A79A6F0052F005 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45EED9615A79A6F0052F005 /* Foundation.framework */; };
+		B45EED9915A79A6F0052F005 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45EED9815A79A6F0052F005 /* CoreGraphics.framework */; };
+		B45EED9F15A79A6F0052F005 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B45EED9D15A79A6F0052F005 /* InfoPlist.strings */; };
+		B45EEDA115A79A6F0052F005 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDA015A79A6F0052F005 /* main.m */; };
+		B45EEDA515A79A6F0052F005 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDA415A79A6F0052F005 /* AppDelegate.m */; };
+		B45EEDA815A79A6F0052F005 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDA715A79A6F0052F005 /* StartViewController.m */; };
+		B45EEDAB15A79A6F0052F005 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45EEDA915A79A6F0052F005 /* StartViewController.xib */; };
+		B45EEDE815A79AAD0052F005 /* Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDB415A79AAD0052F005 /* Crypto.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDE915A79AAD0052F005 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDB615A79AAD0052F005 /* NSData+CommonCrypto.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDEA15A79AAD0052F005 /* PublicKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDB815A79AAD0052F005 /* PublicKeyManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDEB15A79AAD0052F005 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDBA15A79AAD0052F005 /* RSA.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDEC15A79AAD0052F005 /* NSFileManager+FileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDBD15A79AAD0052F005 /* NSFileManager+FileHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDED15A79AAD0052F005 /* NSObject+DelegateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDBF15A79AAD0052F005 /* NSObject+DelegateHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDEE15A79AAD0052F005 /* NSString+Regexp.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDC115A79AAD0052F005 /* NSString+Regexp.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDEF15A79AAD0052F005 /* NSString+StringWithData.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDC315A79AAD0052F005 /* NSString+StringWithData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDF015A79AAD0052F005 /* NSString+URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDC515A79AAD0052F005 /* NSString+URLHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDF115A79AAD0052F005 /* HCEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDC915A79AAD0052F005 /* HCEnvironment.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDF215A79AAD0052F005 /* HCEnvironmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDCB15A79AAD0052F005 /* HCEnvironmentManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDF315A79AAD0052F005 /* WifiScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDCF15A79AAD0052F005 /* WifiScanner.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDF415A79AAD0052F005 /* HCFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDD215A79AAD0052F005 /* HCFileCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDF515A79AAD0052F005 /* HCGeoStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDD415A79AAD0052F005 /* HCGeoStorage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDF615A79AAD0052F005 /* HCLinccer.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDD715A79AAD0052F005 /* HCLinccer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDF715A79AAD0052F005 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDDA15A79AAD0052F005 /* Base64Transcoder.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDF815A79AAD0052F005 /* NSData_Base64Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDDD15A79AAD0052F005 /* NSData_Base64Extensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDF915A79AAD0052F005 /* NSDictionary+CSURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDDF15A79AAD0052F005 /* NSDictionary+CSURLParams.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDFA15A79AAD0052F005 /* HCAuthenticatedHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDE315A79AAD0052F005 /* HCAuthenticatedHttpClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDFB15A79AAD0052F005 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDE515A79AAD0052F005 /* HttpClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEDFC15A79AAD0052F005 /* HttpConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEDE715A79AAD0052F005 /* HttpConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B45EEE0915A79B060052F005 /* libDeezer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B45EEE0515A79B060052F005 /* libDeezer.a */; };
+		B45EEE0A15A79B060052F005 /* DeezerLibClose.png in Resources */ = {isa = PBXBuildFile; fileRef = B45EEE0715A79B060052F005 /* DeezerLibClose.png */; };
+		B45EEE0B15A79B060052F005 /* DeezerLibClose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45EEE0815A79B060052F005 /* DeezerLibClose@2x.png */; };
+		B45EEE0D15A79C660052F005 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45EEE0C15A79C660052F005 /* Security.framework */; };
+		B45EEE0F15A79C760052F005 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45EEE0E15A79C760052F005 /* CoreLocation.framework */; };
+		B45EEE1115A79D9B0052F005 /* YAJLIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45EEE1015A79D9B0052F005 /* YAJLIOS.framework */; };
+		B45EEE1515A79EAA0052F005 /* ReceiverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45EEE1315A79EAA0052F005 /* ReceiverViewController.m */; };
+		B45EEE1615A79EAA0052F005 /* ReceiverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45EEE1415A79EAA0052F005 /* ReceiverViewController.xib */; };
+		B48EF9AD15A81F4500388D83 /* SenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9AB15A81F4500388D83 /* SenderViewController.m */; };
+		B48EF9AE15A81F4500388D83 /* SenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48EF9AC15A81F4500388D83 /* SenderViewController.xib */; };
+		B48EF9B415A822B900388D83 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48EF9B315A822B900388D83 /* SearchCell.xib */; };
+		B48EF9B715A8231700388D83 /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9B615A8231700388D83 /* SearchCell.m */; };
+		B48EF9B915A8246900388D83 /* VetoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48EF9B815A8246900388D83 /* VetoCell.xib */; };
+		B48EF9BC15A8249F00388D83 /* VetoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9BB15A8249F00388D83 /* VetoCell.m */; };
+		B48EF9BE15A8255200388D83 /* SongListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48EF9BD15A8255200388D83 /* SongListCell.xib */; };
+		B48EF9C115A825A800388D83 /* SongListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9C015A825A800388D83 /* SongListCell.m */; };
+		B48EF9C515A8276B00388D83 /* empty_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = B48EF9C315A8276B00388D83 /* empty_cover.png */; };
+		B48EF9C615A8276B00388D83 /* empty_cover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48EF9C415A8276B00388D83 /* empty_cover@2x.png */; };
+		B48EF9CF15A830D900388D83 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9CE15A830D900388D83 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EF9E615A8319C00388D83 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9D215A8319C00388D83 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EF9E715A8319C00388D83 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9D415A8319C00388D83 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EF9E815A8319C00388D83 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9D615A8319C00388D83 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EF9E915A8319C00388D83 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9D815A8319C00388D83 /* AFJSONRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EF9EA15A8319C00388D83 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9DA15A8319C00388D83 /* AFJSONUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EF9EB15A8319C00388D83 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9DC15A8319C00388D83 /* AFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EF9EC15A8319C00388D83 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9DF15A8319C00388D83 /* AFPropertyListRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EF9ED15A8319C00388D83 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9E115A8319C00388D83 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EF9EE15A8319C00388D83 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9E315A8319C00388D83 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EF9EF15A8319C00388D83 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9E515A8319C00388D83 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EF9F415A8329600388D83 /* DeezerSession.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9F115A8329200388D83 /* DeezerSession.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EF9F515A8329B00388D83 /* DictionaryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9F315A8329200388D83 /* DictionaryParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA0E15A8330400388D83 /* DeezerAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9F715A832C700388D83 /* DeezerAlbum.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA0F15A8330400388D83 /* DeezerArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9F915A832C800388D83 /* DeezerArtist.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA1015A8330400388D83 /* DeezerComment.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9FB15A832C900388D83 /* DeezerComment.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA1115A8330400388D83 /* DeezerEditorial.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9FD15A832C900388D83 /* DeezerEditorial.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA1215A8330400388D83 /* DeezerFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9FF15A832C900388D83 /* DeezerFolder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA1315A8330400388D83 /* DeezerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EFA0115A832CA00388D83 /* DeezerItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA1415A8330400388D83 /* DeezerPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EFA0315A832CA00388D83 /* DeezerPermission.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA1515A8330400388D83 /* DeezerPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EFA0515A832CB00388D83 /* DeezerPlaylist.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA1615A8330400388D83 /* DeezerRadio.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EFA0715A832CB00388D83 /* DeezerRadio.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA1715A8330400388D83 /* DeezerTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EFA0915A832CB00388D83 /* DeezerTrack.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA1815A8330400388D83 /* DeezerURL.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EFA0B15A832CC00388D83 /* DeezerURL.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA1915A8330400388D83 /* DeezerUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EFA0D15A832CC00388D83 /* DeezerUser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA1C15A8332800388D83 /* DeezerItemConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EFA1B15A8332800388D83 /* DeezerItemConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA1F15A8336F00388D83 /* AudioPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EFA1E15A8336C00388D83 /* AudioPlayerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA2215A8339300388D83 /* DeezerAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EFA2115A8339300388D83 /* DeezerAudioPlayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA2515A833E200388D83 /* PlayerAndBufferSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EFA2415A833DF00388D83 /* PlayerAndBufferSlider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B48EFA2715A8343C00388D83 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48EFA2615A8343B00388D83 /* AVFoundation.framework */; };
+		B48EFA2915A8344300388D83 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48EFA2815A8344200388D83 /* AudioToolbox.framework */; };
+		B48EFA2B15A8345B00388D83 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48EFA2A15A8345B00388D83 /* SystemConfiguration.framework */; };
+		B48EFA6115A8743A00388D83 /* CreatePlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48EFA5F15A8743900388D83 /* CreatePlaylistViewController.m */; };
+		B48EFA6215A8743A00388D83 /* CreatePlaylistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48EFA6015A8743900388D83 /* CreatePlaylistViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B45EED9015A79A6F0052F005 /* deejz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deejz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45EED9415A79A6F0052F005 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B45EED9615A79A6F0052F005 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B45EED9815A79A6F0052F005 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B45EED9C15A79A6F0052F005 /* deejz-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "deejz-Info.plist"; sourceTree = "<group>"; };
+		B45EED9E15A79A6F0052F005 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B45EEDA015A79A6F0052F005 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B45EEDA215A79A6F0052F005 /* deejz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "deejz-Prefix.pch"; sourceTree = "<group>"; };
+		B45EEDA315A79A6F0052F005 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B45EEDA415A79A6F0052F005 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B45EEDA615A79A6F0052F005 /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		B45EEDA715A79A6F0052F005 /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		B45EEDAA15A79A6F0052F005 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StartViewController.xib; sourceTree = "<group>"; };
+		B45EEDB315A79AAD0052F005 /* Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crypto.h; sourceTree = "<group>"; };
+		B45EEDB415A79AAD0052F005 /* Crypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crypto.m; sourceTree = "<group>"; };
+		B45EEDB515A79AAD0052F005 /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		B45EEDB615A79AAD0052F005 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		B45EEDB715A79AAD0052F005 /* PublicKeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicKeyManager.h; sourceTree = "<group>"; };
+		B45EEDB815A79AAD0052F005 /* PublicKeyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicKeyManager.m; sourceTree = "<group>"; };
+		B45EEDB915A79AAD0052F005 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		B45EEDBA15A79AAD0052F005 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		B45EEDBC15A79AAD0052F005 /* NSFileManager+FileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+FileHelper.h"; sourceTree = "<group>"; };
+		B45EEDBD15A79AAD0052F005 /* NSFileManager+FileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+FileHelper.m"; sourceTree = "<group>"; };
+		B45EEDBE15A79AAD0052F005 /* NSObject+DelegateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DelegateHelper.h"; sourceTree = "<group>"; };
+		B45EEDBF15A79AAD0052F005 /* NSObject+DelegateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DelegateHelper.m"; sourceTree = "<group>"; };
+		B45EEDC015A79AAD0052F005 /* NSString+Regexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Regexp.h"; sourceTree = "<group>"; };
+		B45EEDC115A79AAD0052F005 /* NSString+Regexp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regexp.m"; sourceTree = "<group>"; };
+		B45EEDC215A79AAD0052F005 /* NSString+StringWithData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringWithData.h"; sourceTree = "<group>"; };
+		B45EEDC315A79AAD0052F005 /* NSString+StringWithData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringWithData.m"; sourceTree = "<group>"; };
+		B45EEDC415A79AAD0052F005 /* NSString+URLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLHelper.h"; sourceTree = "<group>"; };
+		B45EEDC515A79AAD0052F005 /* NSString+URLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLHelper.m"; sourceTree = "<group>"; };
+		B45EEDC815A79AAD0052F005 /* HCEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEnvironment.h; sourceTree = "<group>"; };
+		B45EEDC915A79AAD0052F005 /* HCEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEnvironment.m; sourceTree = "<group>"; };
+		B45EEDCA15A79AAD0052F005 /* HCEnvironmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEnvironmentManager.h; sourceTree = "<group>"; };
+		B45EEDCB15A79AAD0052F005 /* HCEnvironmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEnvironmentManager.m; sourceTree = "<group>"; };
+		B45EEDCC15A79AAD0052F005 /* HCEnvironmentManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEnvironmentManagerDelegate.h; sourceTree = "<group>"; };
+		B45EEDCE15A79AAD0052F005 /* WifiScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiScanner.h; sourceTree = "<group>"; };
+		B45EEDCF15A79AAD0052F005 /* WifiScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiScanner.m; sourceTree = "<group>"; };
+		B45EEDD015A79AAD0052F005 /* WifiScannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiScannerDelegate.h; sourceTree = "<group>"; };
+		B45EEDD115A79AAD0052F005 /* HCFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCFileCache.h; sourceTree = "<group>"; };
+		B45EEDD215A79AAD0052F005 /* HCFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCFileCache.m; sourceTree = "<group>"; };
+		B45EEDD315A79AAD0052F005 /* HCGeoStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCGeoStorage.h; sourceTree = "<group>"; };
+		B45EEDD415A79AAD0052F005 /* HCGeoStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCGeoStorage.m; sourceTree = "<group>"; };
+		B45EEDD515A79AAD0052F005 /* HCGeoStorageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCGeoStorageDelegate.h; sourceTree = "<group>"; };
+		B45EEDD615A79AAD0052F005 /* HCLinccer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCLinccer.h; sourceTree = "<group>"; };
+		B45EEDD715A79AAD0052F005 /* HCLinccer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCLinccer.m; sourceTree = "<group>"; };
+		B45EEDD815A79AAD0052F005 /* HCLinccerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCLinccerDelegate.h; sourceTree = "<group>"; };
+		B45EEDDA15A79AAD0052F005 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
+		B45EEDDB15A79AAD0052F005 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		B45EEDDC15A79AAD0052F005 /* NSData_Base64Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSData_Base64Extensions.h; sourceTree = "<group>"; };
+		B45EEDDD15A79AAD0052F005 /* NSData_Base64Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSData_Base64Extensions.m; sourceTree = "<group>"; };
+		B45EEDDE15A79AAD0052F005 /* NSDictionary+CSURLParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CSURLParams.h"; sourceTree = "<group>"; };
+		B45EEDDF15A79AAD0052F005 /* NSDictionary+CSURLParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CSURLParams.m"; sourceTree = "<group>"; };
+		B45EEDE015A79AAD0052F005 /* Hoccer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hoccer.h; sourceTree = "<group>"; };
+		B45EEDE215A79AAD0052F005 /* HCAuthenticatedHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAuthenticatedHttpClient.h; sourceTree = "<group>"; };
+		B45EEDE315A79AAD0052F005 /* HCAuthenticatedHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAuthenticatedHttpClient.m; sourceTree = "<group>"; };
+		B45EEDE415A79AAD0052F005 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		B45EEDE515A79AAD0052F005 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
+		B45EEDE615A79AAD0052F005 /* HttpConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpConnection.h; sourceTree = "<group>"; };
+		B45EEDE715A79AAD0052F005 /* HttpConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpConnection.m; sourceTree = "<group>"; };
+		B45EEDFF15A79B060052F005 /* BufferDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferDelegate.h; sourceTree = "<group>"; };
+		B45EEE0015A79B060052F005 /* DeezerConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerConnect.h; sourceTree = "<group>"; };
+		B45EEE0115A79B060052F005 /* DeezerOAuthDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerOAuthDelegate.h; sourceTree = "<group>"; };
+		B45EEE0215A79B060052F005 /* DeezerRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerRequestDelegate.h; sourceTree = "<group>"; };
+		B45EEE0315A79B060052F005 /* PlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDelegate.h; sourceTree = "<group>"; };
+		B45EEE0415A79B060052F005 /* PlayerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerFactory.h; sourceTree = "<group>"; };
+		B45EEE0515A79B060052F005 /* libDeezer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDeezer.a; sourceTree = "<group>"; };
+		B45EEE0715A79B060052F005 /* DeezerLibClose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeezerLibClose.png; sourceTree = "<group>"; };
+		B45EEE0815A79B060052F005 /* DeezerLibClose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DeezerLibClose@2x.png"; sourceTree = "<group>"; };
+		B45EEE0C15A79C660052F005 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B45EEE0E15A79C760052F005 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B45EEE1015A79D9B0052F005 /* YAJLIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAJLIOS.framework; sourceTree = "<group>"; };
+		B45EEE1215A79EAA0052F005 /* ReceiverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiverViewController.h; sourceTree = "<group>"; };
+		B45EEE1315A79EAA0052F005 /* ReceiverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiverViewController.m; sourceTree = "<group>"; };
+		B45EEE1415A79EAA0052F005 /* ReceiverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiverViewController.xib; sourceTree = "<group>"; };
+		B48EF9AA15A81F4500388D83 /* SenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenderViewController.h; sourceTree = "<group>"; };
+		B48EF9AB15A81F4500388D83 /* SenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenderViewController.m; sourceTree = "<group>"; };
+		B48EF9AC15A81F4500388D83 /* SenderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SenderViewController.xib; sourceTree = "<group>"; };
+		B48EF9B315A822B900388D83 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		B48EF9B515A8231700388D83 /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
+		B48EF9B615A8231700388D83 /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
+		B48EF9B815A8246900388D83 /* VetoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VetoCell.xib; sourceTree = "<group>"; };
+		B48EF9BA15A8249F00388D83 /* VetoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VetoCell.h; sourceTree = "<group>"; };
+		B48EF9BB15A8249F00388D83 /* VetoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VetoCell.m; sourceTree = "<group>"; };
+		B48EF9BD15A8255200388D83 /* SongListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongListCell.xib; sourceTree = "<group>"; };
+		B48EF9BF15A825A800388D83 /* SongListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongListCell.h; sourceTree = "<group>"; };
+		B48EF9C015A825A800388D83 /* SongListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongListCell.m; sourceTree = "<group>"; };
+		B48EF9C315A8276B00388D83 /* empty_cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty_cover.png; sourceTree = "<group>"; };
+		B48EF9C415A8276B00388D83 /* empty_cover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty_cover@2x.png"; sourceTree = "<group>"; };
+		B48EF9CD15A830D900388D83 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		B48EF9CE15A830D900388D83 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		B48EF9D115A8319C00388D83 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		B48EF9D215A8319C00388D83 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		B48EF9D315A8319C00388D83 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		B48EF9D415A8319C00388D83 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		B48EF9D515A8319C00388D83 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		B48EF9D615A8319C00388D83 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		B48EF9D715A8319C00388D83 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		B48EF9D815A8319C00388D83 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		B48EF9D915A8319C00388D83 /* AFJSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONUtilities.h; sourceTree = "<group>"; };
+		B48EF9DA15A8319C00388D83 /* AFJSONUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONUtilities.m; sourceTree = "<group>"; };
+		B48EF9DB15A8319C00388D83 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		B48EF9DC15A8319C00388D83 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		B48EF9DD15A8319C00388D83 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		B48EF9DE15A8319C00388D83 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		B48EF9DF15A8319C00388D83 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		B48EF9E015A8319C00388D83 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		B48EF9E115A8319C00388D83 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		B48EF9E215A8319C00388D83 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		B48EF9E315A8319C00388D83 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		B48EF9E415A8319C00388D83 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		B48EF9E515A8319C00388D83 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		B48EF9F015A8329200388D83 /* DeezerSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeezerSession.h; sourceTree = "<group>"; };
+		B48EF9F115A8329200388D83 /* DeezerSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeezerSession.m; sourceTree = "<group>"; };
+		B48EF9F215A8329200388D83 /* DictionaryParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryParser.h; sourceTree = "<group>"; };
+		B48EF9F315A8329200388D83 /* DictionaryParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictionaryParser.m; sourceTree = "<group>"; };
+		B48EF9F615A832C700388D83 /* DeezerAlbum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeezerAlbum.h; sourceTree = "<group>"; };
+		B48EF9F715A832C700388D83 /* DeezerAlbum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeezerAlbum.m; sourceTree = "<group>"; };
+		B48EF9F815A832C800388D83 /* DeezerArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeezerArtist.h; sourceTree = "<group>"; };
+		B48EF9F915A832C800388D83 /* DeezerArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeezerArtist.m; sourceTree = "<group>"; };
+		B48EF9FA15A832C800388D83 /* DeezerComment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeezerComment.h; sourceTree = "<group>"; };
+		B48EF9FB15A832C900388D83 /* DeezerComment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeezerComment.m; sourceTree = "<group>"; };
+		B48EF9FC15A832C900388D83 /* DeezerEditorial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeezerEditorial.h; sourceTree = "<group>"; };
+		B48EF9FD15A832C900388D83 /* DeezerEditorial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeezerEditorial.m; sourceTree = "<group>"; };
+		B48EF9FE15A832C900388D83 /* DeezerFolder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeezerFolder.h; sourceTree = "<group>"; };
+		B48EF9FF15A832C900388D83 /* DeezerFolder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeezerFolder.m; sourceTree = "<group>"; };
+		B48EFA0015A832CA00388D83 /* DeezerItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeezerItem.h; sourceTree = "<group>"; };
+		B48EFA0115A832CA00388D83 /* DeezerItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeezerItem.m; sourceTree = "<group>"; };
+		B48EFA0215A832CA00388D83 /* DeezerPermission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeezerPermission.h; sourceTree = "<group>"; };
+		B48EFA0315A832CA00388D83 /* DeezerPermission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeezerPermission.m; sourceTree = "<group>"; };
+		B48EFA0415A832CA00388D83 /* DeezerPlaylist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeezerPlaylist.h; sourceTree = "<group>"; };
+		B48EFA0515A832CB00388D83 /* DeezerPlaylist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeezerPlaylist.m; sourceTree = "<group>"; };
+		B48EFA0615A832CB00388D83 /* DeezerRadio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeezerRadio.h; sourceTree = "<group>"; };
+		B48EFA0715A832CB00388D83 /* DeezerRadio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeezerRadio.m; sourceTree = "<group>"; };
+		B48EFA0815A832CB00388D83 /* DeezerTrack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeezerTrack.h; sourceTree = "<group>"; };
+		B48EFA0915A832CB00388D83 /* DeezerTrack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeezerTrack.m; sourceTree = "<group>"; };
+		B48EFA0A15A832CC00388D83 /* DeezerURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeezerURL.h; sourceTree = "<group>"; };
+		B48EFA0B15A832CC00388D83 /* DeezerURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeezerURL.m; sourceTree = "<group>"; };
+		B48EFA0C15A832CC00388D83 /* DeezerUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeezerUser.h; sourceTree = "<group>"; };
+		B48EFA0D15A832CC00388D83 /* DeezerUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeezerUser.m; sourceTree = "<group>"; };
+		B48EFA1A15A8332800388D83 /* DeezerItemConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerItemConnection.h; sourceTree = "<group>"; };
+		B48EFA1B15A8332800388D83 /* DeezerItemConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeezerItemConnection.m; sourceTree = "<group>"; };
+		B48EFA1D15A8336C00388D83 /* AudioPlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioPlayerController.h; sourceTree = "<group>"; };
+		B48EFA1E15A8336C00388D83 /* AudioPlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerController.m; sourceTree = "<group>"; };
+		B48EFA2015A8339300388D83 /* DeezerAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerAudioPlayer.h; sourceTree = "<group>"; };
+		B48EFA2115A8339300388D83 /* DeezerAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeezerAudioPlayer.m; sourceTree = "<group>"; };
+		B48EFA2315A833DE00388D83 /* PlayerAndBufferSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerAndBufferSlider.h; sourceTree = "<group>"; };
+		B48EFA2415A833DF00388D83 /* PlayerAndBufferSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerAndBufferSlider.m; sourceTree = "<group>"; };
+		B48EFA2615A8343B00388D83 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B48EFA2815A8344200388D83 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B48EFA2A15A8345B00388D83 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B48EFA2D15A835CD00388D83 /* SearchCellDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchCellDelegate.h; sourceTree = "<group>"; };
+		B48EFA5E15A8743900388D83 /* CreatePlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePlaylistViewController.h; sourceTree = "<group>"; };
+		B48EFA5F15A8743900388D83 /* CreatePlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePlaylistViewController.m; sourceTree = "<group>"; };
+		B48EFA6015A8743900388D83 /* CreatePlaylistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePlaylistViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B45EED8D15A79A6F0052F005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B48EFA2B15A8345B00388D83 /* SystemConfiguration.framework in Frameworks */,
+				B48EFA2915A8344300388D83 /* AudioToolbox.framework in Frameworks */,
+				B48EFA2715A8343C00388D83 /* AVFoundation.framework in Frameworks */,
+				B45EEE0F15A79C760052F005 /* CoreLocation.framework in Frameworks */,
+				B45EEE0D15A79C660052F005 /* Security.framework in Frameworks */,
+				B45EED9515A79A6F0052F005 /* UIKit.framework in Frameworks */,
+				B45EED9715A79A6F0052F005 /* Foundation.framework in Frameworks */,
+				B45EED9915A79A6F0052F005 /* CoreGraphics.framework in Frameworks */,
+				B45EEE0915A79B060052F005 /* libDeezer.a in Frameworks */,
+				B45EEE1115A79D9B0052F005 /* YAJLIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B45EED8515A79A6F0052F005 = {
+			isa = PBXGroup;
+			children = (
+				B45EED9A15A79A6F0052F005 /* deejz */,
+				B45EED9315A79A6F0052F005 /* Frameworks */,
+				B45EED9115A79A6F0052F005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B45EED9115A79A6F0052F005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B45EED9015A79A6F0052F005 /* deejz.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B45EED9315A79A6F0052F005 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B48EFA2A15A8345B00388D83 /* SystemConfiguration.framework */,
+				B48EFA2815A8344200388D83 /* AudioToolbox.framework */,
+				B48EFA2615A8343B00388D83 /* AVFoundation.framework */,
+				B45EEE0E15A79C760052F005 /* CoreLocation.framework */,
+				B45EEE0C15A79C660052F005 /* Security.framework */,
+				B45EED9415A79A6F0052F005 /* UIKit.framework */,
+				B45EED9615A79A6F0052F005 /* Foundation.framework */,
+				B45EED9815A79A6F0052F005 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B45EED9A15A79A6F0052F005 /* deejz */ = {
+			isa = PBXGroup;
+			children = (
+				B45EEDA315A79A6F0052F005 /* AppDelegate.h */,
+				B45EEDA415A79A6F0052F005 /* AppDelegate.m */,
+				B45EEDA615A79A6F0052F005 /* StartViewController.h */,
+				B45EEDA715A79A6F0052F005 /* StartViewController.m */,
+				B45EEDA915A79A6F0052F005 /* StartViewController.xib */,
+				B48EFA5E15A8743900388D83 /* CreatePlaylistViewController.h */,
+				B48EFA5F15A8743900388D83 /* CreatePlaylistViewController.m */,
+				B48EFA6015A8743900388D83 /* CreatePlaylistViewController.xib */,
+				B45EEE1215A79EAA0052F005 /* ReceiverViewController.h */,
+				B45EEE1315A79EAA0052F005 /* ReceiverViewController.m */,
+				B45EEE1415A79EAA0052F005 /* ReceiverViewController.xib */,
+				B48EF9AA15A81F4500388D83 /* SenderViewController.h */,
+				B48EF9AB15A81F4500388D83 /* SenderViewController.m */,
+				B48EF9B315A822B900388D83 /* SearchCell.xib */,
+				B48EF9B515A8231700388D83 /* SearchCell.h */,
+				B48EF9B615A8231700388D83 /* SearchCell.m */,
+				B48EFA2D15A835CD00388D83 /* SearchCellDelegate.h */,
+				B48EF9AC15A81F4500388D83 /* SenderViewController.xib */,
+				B48EF9B815A8246900388D83 /* VetoCell.xib */,
+				B48EF9BA15A8249F00388D83 /* VetoCell.h */,
+				B48EF9BB15A8249F00388D83 /* VetoCell.m */,
+				B48EF9BD15A8255200388D83 /* SongListCell.xib */,
+				B48EF9BF15A825A800388D83 /* SongListCell.h */,
+				B48EF9C015A825A800388D83 /* SongListCell.m */,
+				B48EFA2C15A8346E00388D83 /* Deezer Stuff */,
+				B48EF9C215A8274E00388D83 /* Assets */,
+				B45EED9B15A79A6F0052F005 /* Supporting Files */,
+			);
+			path = deejz;
+			sourceTree = "<group>";
+		};
+		B45EED9B15A79A6F0052F005 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B48EF9D015A8319C00388D83 /* AFNetworking */,
+				B48EF9CC15A830D900388D83 /* JSONKit */,
+				B45EEE1015A79D9B0052F005 /* YAJLIOS.framework */,
+				B45EEDFD15A79B060052F005 /* deezer-ios-0.7.1 */,
+				B45EEDB115A79AAD0052F005 /* Hoccer */,
+				B45EED9C15A79A6F0052F005 /* deejz-Info.plist */,
+				B45EED9D15A79A6F0052F005 /* InfoPlist.strings */,
+				B45EEDA015A79A6F0052F005 /* main.m */,
+				B45EEDA215A79A6F0052F005 /* deejz-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B45EEDB115A79AAD0052F005 /* Hoccer */ = {
+			isa = PBXGroup;
+			children = (
+				B45EEDB215A79AAD0052F005 /* Crypto */,
+				B45EEDBB15A79AAD0052F005 /* Helper */,
+				B45EEDC615A79AAD0052F005 /* HoccerClient */,
+			);
+			path = Hoccer;
+			sourceTree = "<group>";
+		};
+		B45EEDB215A79AAD0052F005 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				B45EEDB315A79AAD0052F005 /* Crypto.h */,
+				B45EEDB415A79AAD0052F005 /* Crypto.m */,
+				B45EEDB515A79AAD0052F005 /* NSData+CommonCrypto.h */,
+				B45EEDB615A79AAD0052F005 /* NSData+CommonCrypto.m */,
+				B45EEDB715A79AAD0052F005 /* PublicKeyManager.h */,
+				B45EEDB815A79AAD0052F005 /* PublicKeyManager.m */,
+				B45EEDB915A79AAD0052F005 /* RSA.h */,
+				B45EEDBA15A79AAD0052F005 /* RSA.m */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		B45EEDBB15A79AAD0052F005 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B45EEDBC15A79AAD0052F005 /* NSFileManager+FileHelper.h */,
+				B45EEDBD15A79AAD0052F005 /* NSFileManager+FileHelper.m */,
+				B45EEDBE15A79AAD0052F005 /* NSObject+DelegateHelper.h */,
+				B45EEDBF15A79AAD0052F005 /* NSObject+DelegateHelper.m */,
+				B45EEDC015A79AAD0052F005 /* NSString+Regexp.h */,
+				B45EEDC115A79AAD0052F005 /* NSString+Regexp.m */,
+				B45EEDC215A79AAD0052F005 /* NSString+StringWithData.h */,
+				B45EEDC315A79AAD0052F005 /* NSString+StringWithData.m */,
+				B45EEDC415A79AAD0052F005 /* NSString+URLHelper.h */,
+				B45EEDC515A79AAD0052F005 /* NSString+URLHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B45EEDC615A79AAD0052F005 /* HoccerClient */ = {
+			isa = PBXGroup;
+			children = (
+				B45EEDC715A79AAD0052F005 /* EnvironmentController */,
+				B45EEDD115A79AAD0052F005 /* HCFileCache.h */,
+				B45EEDD215A79AAD0052F005 /* HCFileCache.m */,
+				B45EEDD315A79AAD0052F005 /* HCGeoStorage.h */,
+				B45EEDD415A79AAD0052F005 /* HCGeoStorage.m */,
+				B45EEDD515A79AAD0052F005 /* HCGeoStorageDelegate.h */,
+				B45EEDD615A79AAD0052F005 /* HCLinccer.h */,
+				B45EEDD715A79AAD0052F005 /* HCLinccer.m */,
+				B45EEDD815A79AAD0052F005 /* HCLinccerDelegate.h */,
+				B45EEDD915A79AAD0052F005 /* Helper */,
+				B45EEDE015A79AAD0052F005 /* Hoccer.h */,
+				B45EEDE115A79AAD0052F005 /* HttpClient */,
+			);
+			path = HoccerClient;
+			sourceTree = "<group>";
+		};
+		B45EEDC715A79AAD0052F005 /* EnvironmentController */ = {
+			isa = PBXGroup;
+			children = (
+				B45EEDC815A79AAD0052F005 /* HCEnvironment.h */,
+				B45EEDC915A79AAD0052F005 /* HCEnvironment.m */,
+				B45EEDCA15A79AAD0052F005 /* HCEnvironmentManager.h */,
+				B45EEDCB15A79AAD0052F005 /* HCEnvironmentManager.m */,
+				B45EEDCC15A79AAD0052F005 /* HCEnvironmentManagerDelegate.h */,
+				B45EEDCD15A79AAD0052F005 /* Wifi */,
+			);
+			path = EnvironmentController;
+			sourceTree = "<group>";
+		};
+		B45EEDCD15A79AAD0052F005 /* Wifi */ = {
+			isa = PBXGroup;
+			children = (
+				B45EEDCE15A79AAD0052F005 /* WifiScanner.h */,
+				B45EEDCF15A79AAD0052F005 /* WifiScanner.m */,
+				B45EEDD015A79AAD0052F005 /* WifiScannerDelegate.h */,
+			);
+			path = Wifi;
+			sourceTree = "<group>";
+		};
+		B45EEDD915A79AAD0052F005 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B45EEDDA15A79AAD0052F005 /* Base64Transcoder.c */,
+				B45EEDDB15A79AAD0052F005 /* Base64Transcoder.h */,
+				B45EEDDC15A79AAD0052F005 /* NSData_Base64Extensions.h */,
+				B45EEDDD15A79AAD0052F005 /* NSData_Base64Extensions.m */,
+				B45EEDDE15A79AAD0052F005 /* NSDictionary+CSURLParams.h */,
+				B45EEDDF15A79AAD0052F005 /* NSDictionary+CSURLParams.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B45EEDE115A79AAD0052F005 /* HttpClient */ = {
+			isa = PBXGroup;
+			children = (
+				B45EEDE215A79AAD0052F005 /* HCAuthenticatedHttpClient.h */,
+				B45EEDE315A79AAD0052F005 /* HCAuthenticatedHttpClient.m */,
+				B45EEDE415A79AAD0052F005 /* HttpClient.h */,
+				B45EEDE515A79AAD0052F005 /* HttpClient.m */,
+				B45EEDE615A79AAD0052F005 /* HttpConnection.h */,
+				B45EEDE715A79AAD0052F005 /* HttpConnection.m */,
+			);
+			path = HttpClient;
+			sourceTree = "<group>";
+		};
+		B45EEDFD15A79B060052F005 /* deezer-ios-0.7.1 */ = {
+			isa = PBXGroup;
+			children = (
+				B45EEDFE15A79B060052F005 /* Headers */,
+				B45EEE0515A79B060052F005 /* libDeezer.a */,
+				B45EEE0615A79B060052F005 /* Resources */,
+			);
+			path = "deezer-ios-0.7.1";
+			sourceTree = "<group>";
+		};
+		B45EEDFE15A79B060052F005 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				B45EEDFF15A79B060052F005 /* BufferDelegate.h */,
+				B45EEE0015A79B060052F005 /* DeezerConnect.h */,
+				B45EEE0115A79B060052F005 /* DeezerOAuthDelegate.h */,
+				B45EEE0215A79B060052F005 /* DeezerRequestDelegate.h */,
+				B45EEE0315A79B060052F005 /* PlayerDelegate.h */,
+				B45EEE0415A79B060052F005 /* PlayerFactory.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		B45EEE0615A79B060052F005 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B45EEE0715A79B060052F005 /* DeezerLibClose.png */,
+				B45EEE0815A79B060052F005 /* DeezerLibClose@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B48EF9C215A8274E00388D83 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B48EF9C315A8276B00388D83 /* empty_cover.png */,
+				B48EF9C415A8276B00388D83 /* empty_cover@2x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B48EF9CC15A830D900388D83 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				B48EF9CD15A830D900388D83 /* JSONKit.h */,
+				B48EF9CE15A830D900388D83 /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		B48EF9D015A8319C00388D83 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				B48EF9D115A8319C00388D83 /* AFHTTPClient.h */,
+				B48EF9D215A8319C00388D83 /* AFHTTPClient.m */,
+				B48EF9D315A8319C00388D83 /* AFHTTPRequestOperation.h */,
+				B48EF9D415A8319C00388D83 /* AFHTTPRequestOperation.m */,
+				B48EF9D515A8319C00388D83 /* AFImageRequestOperation.h */,
+				B48EF9D615A8319C00388D83 /* AFImageRequestOperation.m */,
+				B48EF9D715A8319C00388D83 /* AFJSONRequestOperation.h */,
+				B48EF9D815A8319C00388D83 /* AFJSONRequestOperation.m */,
+				B48EF9D915A8319C00388D83 /* AFJSONUtilities.h */,
+				B48EF9DA15A8319C00388D83 /* AFJSONUtilities.m */,
+				B48EF9DB15A8319C00388D83 /* AFNetworkActivityIndicatorManager.h */,
+				B48EF9DC15A8319C00388D83 /* AFNetworkActivityIndicatorManager.m */,
+				B48EF9DD15A8319C00388D83 /* AFNetworking.h */,
+				B48EF9DE15A8319C00388D83 /* AFPropertyListRequestOperation.h */,
+				B48EF9DF15A8319C00388D83 /* AFPropertyListRequestOperation.m */,
+				B48EF9E015A8319C00388D83 /* AFURLConnectionOperation.h */,
+				B48EF9E115A8319C00388D83 /* AFURLConnectionOperation.m */,
+				B48EF9E215A8319C00388D83 /* AFXMLRequestOperation.h */,
+				B48EF9E315A8319C00388D83 /* AFXMLRequestOperation.m */,
+				B48EF9E415A8319C00388D83 /* UIImageView+AFNetworking.h */,
+				B48EF9E515A8319C00388D83 /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		B48EFA2C15A8346E00388D83 /* Deezer Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				B48EFA1D15A8336C00388D83 /* AudioPlayerController.h */,
+				B48EFA1E15A8336C00388D83 /* AudioPlayerController.m */,
+				B48EFA2015A8339300388D83 /* DeezerAudioPlayer.h */,
+				B48EFA2115A8339300388D83 /* DeezerAudioPlayer.m */,
+				B48EF9F015A8329200388D83 /* DeezerSession.h */,
+				B48EF9F115A8329200388D83 /* DeezerSession.m */,
+				B48EF9F615A832C700388D83 /* DeezerAlbum.h */,
+				B48EF9F715A832C700388D83 /* DeezerAlbum.m */,
+				B48EF9F815A832C800388D83 /* DeezerArtist.h */,
+				B48EF9F915A832C800388D83 /* DeezerArtist.m */,
+				B48EF9FA15A832C800388D83 /* DeezerComment.h */,
+				B48EF9FB15A832C900388D83 /* DeezerComment.m */,
+				B48EF9FC15A832C900388D83 /* DeezerEditorial.h */,
+				B48EF9FD15A832C900388D83 /* DeezerEditorial.m */,
+				B48EF9FE15A832C900388D83 /* DeezerFolder.h */,
+				B48EF9FF15A832C900388D83 /* DeezerFolder.m */,
+				B48EFA0015A832CA00388D83 /* DeezerItem.h */,
+				B48EFA0115A832CA00388D83 /* DeezerItem.m */,
+				B48EFA0215A832CA00388D83 /* DeezerPermission.h */,
+				B48EFA0315A832CA00388D83 /* DeezerPermission.m */,
+				B48EFA0415A832CA00388D83 /* DeezerPlaylist.h */,
+				B48EFA0515A832CB00388D83 /* DeezerPlaylist.m */,
+				B48EFA0615A832CB00388D83 /* DeezerRadio.h */,
+				B48EFA0715A832CB00388D83 /* DeezerRadio.m */,
+				B48EFA0815A832CB00388D83 /* DeezerTrack.h */,
+				B48EFA0915A832CB00388D83 /* DeezerTrack.m */,
+				B48EFA0A15A832CC00388D83 /* DeezerURL.h */,
+				B48EFA0B15A832CC00388D83 /* DeezerURL.m */,
+				B48EFA0C15A832CC00388D83 /* DeezerUser.h */,
+				B48EFA0D15A832CC00388D83 /* DeezerUser.m */,
+				B48EFA1A15A8332800388D83 /* DeezerItemConnection.h */,
+				B48EFA1B15A8332800388D83 /* DeezerItemConnection.m */,
+				B48EFA2315A833DE00388D83 /* PlayerAndBufferSlider.h */,
+				B48EFA2415A833DF00388D83 /* PlayerAndBufferSlider.m */,
+				B48EF9F215A8329200388D83 /* DictionaryParser.h */,
+				B48EF9F315A8329200388D83 /* DictionaryParser.m */,
+			);
+			name = "Deezer Stuff";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B45EED8F15A79A6F0052F005 /* deejz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B45EEDAE15A79A6F0052F005 /* Build configuration list for PBXNativeTarget "deejz" */;
+			buildPhases = (
+				B45EED8C15A79A6F0052F005 /* Sources */,
+				B45EED8D15A79A6F0052F005 /* Frameworks */,
+				B45EED8E15A79A6F0052F005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = deejz;
+			productName = deejz;
+			productReference = B45EED9015A79A6F0052F005 /* deejz.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B45EED8715A79A6F0052F005 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Call a Nerd";
+			};
+			buildConfigurationList = B45EED8A15A79A6F0052F005 /* Build configuration list for PBXProject "deejz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B45EED8515A79A6F0052F005;
+			productRefGroup = B45EED9115A79A6F0052F005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B45EED8F15A79A6F0052F005 /* deejz */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B45EED8E15A79A6F0052F005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45EED9F15A79A6F0052F005 /* InfoPlist.strings in Resources */,
+				B45EEDAB15A79A6F0052F005 /* StartViewController.xib in Resources */,
+				B45EEE0A15A79B060052F005 /* DeezerLibClose.png in Resources */,
+				B45EEE0B15A79B060052F005 /* DeezerLibClose@2x.png in Resources */,
+				B45EEE1615A79EAA0052F005 /* ReceiverViewController.xib in Resources */,
+				B48EF9AE15A81F4500388D83 /* SenderViewController.xib in Resources */,
+				B48EF9B415A822B900388D83 /* SearchCell.xib in Resources */,
+				B48EF9B915A8246900388D83 /* VetoCell.xib in Resources */,
+				B48EF9BE15A8255200388D83 /* SongListCell.xib in Resources */,
+				B48EF9C515A8276B00388D83 /* empty_cover.png in Resources */,
+				B48EF9C615A8276B00388D83 /* empty_cover@2x.png in Resources */,
+				B48EFA6215A8743A00388D83 /* CreatePlaylistViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B45EED8C15A79A6F0052F005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45EEDA115A79A6F0052F005 /* main.m in Sources */,
+				B45EEDA515A79A6F0052F005 /* AppDelegate.m in Sources */,
+				B45EEDA815A79A6F0052F005 /* StartViewController.m in Sources */,
+				B45EEDE815A79AAD0052F005 /* Crypto.m in Sources */,
+				B45EEDE915A79AAD0052F005 /* NSData+CommonCrypto.m in Sources */,
+				B45EEDEA15A79AAD0052F005 /* PublicKeyManager.m in Sources */,
+				B45EEDEB15A79AAD0052F005 /* RSA.m in Sources */,
+				B45EEDEC15A79AAD0052F005 /* NSFileManager+FileHelper.m in Sources */,
+				B45EEDED15A79AAD0052F005 /* NSObject+DelegateHelper.m in Sources */,
+				B45EEDEE15A79AAD0052F005 /* NSString+Regexp.m in Sources */,
+				B45EEDEF15A79AAD0052F005 /* NSString+StringWithData.m in Sources */,
+				B45EEDF015A79AAD0052F005 /* NSString+URLHelper.m in Sources */,
+				B45EEDF115A79AAD0052F005 /* HCEnvironment.m in Sources */,
+				B45EEDF215A79AAD0052F005 /* HCEnvironmentManager.m in Sources */,
+				B45EEDF315A79AAD0052F005 /* WifiScanner.m in Sources */,
+				B45EEDF415A79AAD0052F005 /* HCFileCache.m in Sources */,
+				B45EEDF515A79AAD0052F005 /* HCGeoStorage.m in Sources */,
+				B45EEDF615A79AAD0052F005 /* HCLinccer.m in Sources */,
+				B45EEDF715A79AAD0052F005 /* Base64Transcoder.c in Sources */,
+				B45EEDF815A79AAD0052F005 /* NSData_Base64Extensions.m in Sources */,
+				B45EEDF915A79AAD0052F005 /* NSDictionary+CSURLParams.m in Sources */,
+				B45EEDFA15A79AAD0052F005 /* HCAuthenticatedHttpClient.m in Sources */,
+				B45EEDFB15A79AAD0052F005 /* HttpClient.m in Sources */,
+				B45EEDFC15A79AAD0052F005 /* HttpConnection.m in Sources */,
+				B45EEE1515A79EAA0052F005 /* ReceiverViewController.m in Sources */,
+				B48EF9AD15A81F4500388D83 /* SenderViewController.m in Sources */,
+				B48EF9B715A8231700388D83 /* SearchCell.m in Sources */,
+				B48EF9BC15A8249F00388D83 /* VetoCell.m in Sources */,
+				B48EF9C115A825A800388D83 /* SongListCell.m in Sources */,
+				B48EF9CF15A830D900388D83 /* JSONKit.m in Sources */,
+				B48EF9E615A8319C00388D83 /* AFHTTPClient.m in Sources */,
+				B48EF9E715A8319C00388D83 /* AFHTTPRequestOperation.m in Sources */,
+				B48EF9E815A8319C00388D83 /* AFImageRequestOperation.m in Sources */,
+				B48EF9E915A8319C00388D83 /* AFJSONRequestOperation.m in Sources */,
+				B48EF9EA15A8319C00388D83 /* AFJSONUtilities.m in Sources */,
+				B48EF9EB15A8319C00388D83 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				B48EF9EC15A8319C00388D83 /* AFPropertyListRequestOperation.m in Sources */,
+				B48EF9ED15A8319C00388D83 /* AFURLConnectionOperation.m in Sources */,
+				B48EF9EE15A8319C00388D83 /* AFXMLRequestOperation.m in Sources */,
+				B48EF9EF15A8319C00388D83 /* UIImageView+AFNetworking.m in Sources */,
+				B48EF9F415A8329600388D83 /* DeezerSession.m in Sources */,
+				B48EF9F515A8329B00388D83 /* DictionaryParser.m in Sources */,
+				B48EFA0E15A8330400388D83 /* DeezerAlbum.m in Sources */,
+				B48EFA0F15A8330400388D83 /* DeezerArtist.m in Sources */,
+				B48EFA1015A8330400388D83 /* DeezerComment.m in Sources */,
+				B48EFA1115A8330400388D83 /* DeezerEditorial.m in Sources */,
+				B48EFA1215A8330400388D83 /* DeezerFolder.m in Sources */,
+				B48EFA1315A8330400388D83 /* DeezerItem.m in Sources */,
+				B48EFA1415A8330400388D83 /* DeezerPermission.m in Sources */,
+				B48EFA1515A8330400388D83 /* DeezerPlaylist.m in Sources */,
+				B48EFA1615A8330400388D83 /* DeezerRadio.m in Sources */,
+				B48EFA1715A8330400388D83 /* DeezerTrack.m in Sources */,
+				B48EFA1815A8330400388D83 /* DeezerURL.m in Sources */,
+				B48EFA1915A8330400388D83 /* DeezerUser.m in Sources */,
+				B48EFA1C15A8332800388D83 /* DeezerItemConnection.m in Sources */,
+				B48EFA1F15A8336F00388D83 /* AudioPlayerController.m in Sources */,
+				B48EFA2215A8339300388D83 /* DeezerAudioPlayer.m in Sources */,
+				B48EFA2515A833E200388D83 /* PlayerAndBufferSlider.m in Sources */,
+				B48EFA6115A8743A00388D83 /* CreatePlaylistViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B45EED9D15A79A6F0052F005 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B45EED9E15A79A6F0052F005 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B45EEDA915A79A6F0052F005 /* StartViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B45EEDAA15A79A6F0052F005 /* en */,
+			);
+			name = StartViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B45EEDAC15A79A6F0052F005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B45EEDAD15A79A6F0052F005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B45EEDAF15A79A6F0052F005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/deejz\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "deejz/deejz-Prefix.pch";
+				INFOPLIST_FILE = "deejz/deejz-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/deejz/deezer-ios-0.7.1\"",
+				);
+				PRODUCT_NAME = deejz;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B45EEDB015A79A6F0052F005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/deejz\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "deejz/deejz-Prefix.pch";
+				INFOPLIST_FILE = "deejz/deejz-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/deejz/deezer-ios-0.7.1\"",
+				);
+				PRODUCT_NAME = deejz;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B45EED8A15A79A6F0052F005 /* Build configuration list for PBXProject "deejz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B45EEDAC15A79A6F0052F005 /* Debug */,
+				B45EEDAD15A79A6F0052F005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B45EEDAE15A79A6F0052F005 /* Build configuration list for PBXNativeTarget "deejz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B45EEDAF15A79A6F0052F005 /* Debug */,
+				B45EEDB015A79A6F0052F005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B45EED8715A79A6F0052F005 /* Project object */;
+}
