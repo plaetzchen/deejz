@@ -15,7 +15,10 @@ urlpatterns = patterns('',
 	url(r'^party\/(?P<party_slug>\d+)/$', 'party.views.party'),
 	url(r'^party\/(?P<party_slug>\d+)/playlist\.json$', 'party.views.playlist_json'),
 	url(r'^party\/(?P<party_slug>\d+)/details\.json$', 'party.views.details_json'),
-	url(r'^party\/(?P<party_slug>\d+)/add_song$', 'party.views.add_song'),
+	url(r'^party\/(?P<party_slug>\d+)/add_song/$', 'party.views.add_song'),
+	url(r'^party\/(?P<party_slug>\d+)/next_song\.json$', 'party.views.get_next_song'),
+	url(r'^party\/(?P<party_slug>\d+)/current_song\.json/$', 'party.views.get_current_song'),
+	
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 )

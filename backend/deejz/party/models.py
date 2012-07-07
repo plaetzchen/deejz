@@ -16,6 +16,7 @@ class Song(models.Model):
 	title = models.CharField(max_length=1024, null=True)
 	played = models.DateTimeField(blank=True, null=True)
 	vetoed = models.BooleanField(default=False)
+	added_by_uuid = models.CharField(max_length=1024, null=True)
 	
 	def __unicode__(self):
 		return '%s (%d)' % (self.title, self.deezer_id)
