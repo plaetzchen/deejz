@@ -76,13 +76,13 @@
 
 - (void)player:(PlayerFactory*)player timeChanged:(long)time {
     //NSLog(@"[Debug][DeezerAudioPlayer] player progress -> %lu", progress);
-//    if ([_delegate respondsToSelector:@selector(playProgressChanged:)]) {
-//        [_delegate playerProgressChanged:playerProgress];
-//    }
+    if ([_delegate respondsToSelector:@selector(playerProgressChanged:)]) {
+       [_delegate playerProgressChanged:time];
+   }
 }
 
 - (void)player:(PlayerFactory*)player didFailWithError:(NSError*)error {
-    //NSLog(@"[Debug][DeezerAudioPlayer] player didFailWithError -> error %@", error);
+    NSLog(@"[Debug][DeezerAudioPlayer] player didFailWithError -> error %@", error);
 }
 
 #pragma mark - BufferDelegate

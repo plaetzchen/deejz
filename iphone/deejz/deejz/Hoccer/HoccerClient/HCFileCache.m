@@ -32,7 +32,7 @@
 //  Copyright 2010 Hoccer GmbH. All rights reserved.
 //
 
-#import <YAJLiOs/YAJL.h>
+#import "JSONKit.h"
 #import "HCFileCache.h"
 #import "RSA.h"
 #import "Crypto.h"

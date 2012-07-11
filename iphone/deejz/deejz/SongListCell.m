@@ -15,6 +15,8 @@
 @synthesize playPauseButton;
 @synthesize previewUrl;
 @synthesize deezerId;
+@synthesize trackSelected;
+@synthesize theBackgroundImage;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -57,22 +59,23 @@
     switch (playerState) {
         case DeezerPlayerState_Playing:
             NSLog(@"Playing");
-            [self.playPauseButton setTitle:@"P" forState:UIControlStateNormal];
+            [self.playPauseButton setImage:[UIImage imageNamed:@"songlist_pause_btn"] forState:UIControlStateNormal];
             break;
         case DeezerPlayerState_Paused:
             NSLog(@"Paused");
-            [self.playPauseButton setTitle:@">" forState:UIControlStateNormal];
+            [self.playPauseButton setImage:[UIImage imageNamed:@"songlist_play_btn"] forState:UIControlStateNormal];          
             break;
         case DeezerPlayerState_Stopped:
             NSLog(@"Stopped");
-            [self.playPauseButton setTitle:@">" forState:UIControlStateNormal];
+            [self.playPauseButton setImage:[UIImage imageNamed:@"songlist_play_btn"] forState:UIControlStateNormal];       
             break;
         case DeezerPlayerState_Finished:
             NSLog(@"Finished");
-            [self.playPauseButton setTitle:@">" forState:UIControlStateNormal];
+            [self.playPauseButton setImage:[UIImage imageNamed:@"songlist_play_btn"] forState:UIControlStateNormal];    
+            break;
         case DeezerPlayerState_Ready:
             NSLog(@"Ready");
-            [self.playPauseButton setTitle:@">" forState:UIControlStateNormal];
+            [self.playPauseButton setImage:[UIImage imageNamed:@"songlist_play_btn"] forState:UIControlStateNormal];
             break;
         case DeezerPlayerState_Initialized:
             NSLog(@"Itialized");
@@ -94,4 +97,16 @@
 - (void)trackDurationDidChange:(long)trackDuration {
     
 }
+
+- (void)setTheCellSelected:(BOOL)selected{
+    self.trackSelected = selected;
+    if (selected){
+        self.theBackgroundImage.image = [UIImage imageNamed:@"songlist_cell_bg_selected"];
+    }
+    else {
+        self.theBackgroundImage.image = [UIImage imageNamed:@"songlist_cell_bg"];
+    }
+
+}
+
 @end

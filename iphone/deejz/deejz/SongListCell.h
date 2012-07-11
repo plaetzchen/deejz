@@ -17,8 +17,11 @@
 @property (strong, nonatomic) IBOutlet UIButton *playPauseButton;
 @property (strong, nonatomic) NSString *previewUrl;
 @property (strong, nonatomic) NSString *deezerId;
+@property (atomic) BOOL trackSelected;
+@property (strong, nonatomic) IBOutlet UIImageView *theBackgroundImage;
 
 - (IBAction)playPauseTapped:(id)sender;
+- (void)setTheCellSelected:(BOOL)selected;
 - (void)preparePlayerWithURL:(NSString *)url AndID:(NSString *)theId;
 
 @end

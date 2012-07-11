@@ -9,21 +9,22 @@
 #import "VetoCell.h"
 
 @implementation VetoCell
+@synthesize currentSongLabel,delegate;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
     }
     return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (IBAction)likePressed:(id)sender {
+    [delegate vetoCellDidVoteLike];
 }
 
+- (IBAction)dislikeTapped:(id)sender {
+    [delegate vetoCellDidVoteDislike];
+}
 @end

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VetoCellDelegate.h"
+@interface VetoCell : UIView 
 
-@interface VetoCell : UITableViewCell
+- (IBAction)likePressed:(id)sender;
+- (IBAction)dislikeTapped:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UILabel *currentSongLabel;
+@property (atomic, strong) id <VetoCellDelegate>delegate;
 @end

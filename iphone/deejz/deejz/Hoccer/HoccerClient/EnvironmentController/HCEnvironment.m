@@ -32,7 +32,7 @@
 //  Copyright 2010 Hoccer GmbH. All rights reserved.
 //
 
-#import <YAJLiOs/YAJL.h>
+#import "JSONKit.h"
 #import "HCEnvironment.h"
 
 @interface HCEnvironment ()
@@ -72,7 +72,7 @@
 - (NSString *)JSONRepresentation {
     
     @try {
-        return [[self dict] yajl_JSONString];
+        return [[self dict] JSONString];
 	}
 	@catch (NSException * e) { NSLog(@"%@", e); }
     

@@ -12,21 +12,14 @@
 
 @synthesize delegate;
 @synthesize searchSegmentedControl;
+@synthesize theTextField;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
     }
     return self;
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -38,6 +31,16 @@
 }
 
 - (IBAction)searchSegmentedControlChanged:(id)sender {
+    
+    if (searchSegmentedControl.selectedSegmentIndex == 0){
+        [self.searchSegmentedControl setImage:[UIImage imageNamed:@"sender_search_sctrl_tracks_active"] forSegmentAtIndex:0];
+        [self.searchSegmentedControl setImage:[UIImage imageNamed:@"sender_search_sctrl_genres_inactive"] forSegmentAtIndex:1];
+    }
+    else {
+        [self.searchSegmentedControl setImage:[UIImage imageNamed:@"sender_search_sctrl_tracks_inactive"] forSegmentAtIndex:0];
+        [self.searchSegmentedControl setImage:[UIImage imageNamed:@"sender_search_sctrl_genres_active"] forSegmentAtIndex:1];
+    }
+    
     if (searchSegmentedControl.selectedSegmentIndex == 1){
         [delegate searchCellDidSelectGenre];
     }

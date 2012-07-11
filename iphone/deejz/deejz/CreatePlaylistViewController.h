@@ -7,10 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DeezerSession.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface CreatePlaylistViewController : UIViewController <UITextFieldDelegate>
+@interface CreatePlaylistViewController : UIViewController <UITextFieldDelegate, DeezerSessionRequestDelegate,CLLocationManagerDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
+@property (strong, nonatomic) NSString *returnedSlug;
+@property (strong, nonatomic) CLLocationManager *clManager;
+@property (strong, nonatomic) CLLocation *currentLocation;
+@property (strong, nonatomic) IBOutlet UINavigationBar *theNavBar;
+@property (strong, nonatomic) IBOutlet UINavigationItem *theNavItem;
+
 - (IBAction)cancelButtonTapped:(id)sender;
 
 - (IBAction)createButtonTapped:(id)sender;
+
 @end

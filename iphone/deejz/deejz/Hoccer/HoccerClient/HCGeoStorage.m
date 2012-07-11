@@ -32,7 +32,7 @@
 //  Copyright 2010 Hoccer GmbH. All rights reserved.
 //
 
-#import <YAJLiOS/YAJL.h>
+#import "JSONKit.h"
 #import <MapKit/MapKit.h>
 #import "HCGeoStorage.h"
 #import "HCEnvironment.h"

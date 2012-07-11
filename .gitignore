@@ -7,3 +7,7 @@
 *.DS_Store
 *.swp
 *.out
+
+## GestureInterpreter isn't open source
+
+GesturesInterpreter/*

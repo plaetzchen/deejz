@@ -32,7 +32,7 @@
 //  Copyright 2010 Hoccer GmbH. All rights reserved.
 //
 
-#import <YAJLiOS/YAJL.h>
+#import "JSONKit.h"
 #import "NSString+URLHelper.h"
 #import "NSDictionary+CSURLParams.h"
 #import "NSString+StringWithData.h"
@@ -121,7 +121,7 @@
 		[self didFailWithError:nil];
 	}
 	
-    NSData *dataToSend = [[data yajl_JSONString] dataUsingEncoding:NSUTF8StringEncoding]; 
+    NSData *dataToSend = [[data JSONString] dataUsingEncoding:NSUTF8StringEncoding]; 
     
 	NSString *actionString = [@"/action" stringByAppendingPathComponent:mode];
 	self.linccingId = [httpClient putURI:[uri stringByAppendingPathComponent: actionString] 
@@ -324,7 +324,9 @@
 	
 	@try {
 		if ([delegate respondsToSelector:@selector(linccer:didUpdateEnvironment:)]) {
-			[delegate linccer:self didUpdateEnvironment:[receivedData yajl_JSON]];
+            JSONDecoder* decoder = [[JSONDecoder alloc]
+                                    initWithParseOptions:JKParseOptionNone];
+			[delegate linccer:self didUpdateEnvironment:[decoder objectWithData:receivedData]];
 		}
 	}
 	@catch (NSException * e) { NSLog(@"%@", e); }
@@ -341,7 +343,9 @@
 	}
     
 	if ([delegate respondsToSelector:@selector(linccer:didSendData:)]) {
-		[delegate linccer: self didSendData: [data yajl_JSON]];
+        JSONDecoder* decoder = [[JSONDecoder alloc]
+                                initWithParseOptions:JKParseOptionNone];
+		[delegate linccer: self didSendData: [decoder objectWithData:data]];
 	}
 }
 
@@ -355,8 +359,10 @@
 	}
 	
     @try {
-        if ([delegate respondsToSelector:@selector(linccer:didReceiveData:)]) {        
-            [delegate linccer: self didReceiveData: [data yajl_JSON]];
+        if ([delegate respondsToSelector:@selector(linccer:didReceiveData:)]) {  
+            JSONDecoder* decoder = [[JSONDecoder alloc]
+                                    initWithParseOptions:JKParseOptionNone];
+            [delegate linccer: self didReceiveData: [decoder objectWithData:data]];
         }
     }
     @catch (NSException * e) { NSLog(@"%@", e); }
@@ -373,8 +379,9 @@
     
     @try {
 	
-    
-    NSDictionary *dictionary = [groupData yajl_JSON];
+        JSONDecoder* decoder = [[JSONDecoder alloc]
+                                initWithParseOptions:JKParseOptionNone];
+    NSDictionary *dictionary = [decoder objectWithData:groupData];
 
     self.groupId = [dictionary objectForKey:@"group_id"];
     
@@ -400,7 +407,9 @@
     //NSString *theKey = [[[NSString stringWithData: pubkey usingEncoding:NSUTF8StringEncoding]componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@""];
     
     @try {
-        NSDictionary *theResponse = [pubkey yajl_JSON];
+        JSONDecoder* decoder = [[JSONDecoder alloc]
+                                initWithParseOptions:JKParseOptionNone];
+        NSDictionary *theResponse = [decoder objectWithData:pubkey];
         
         NSString *theKey = [theResponse objectForKey:@"pubkey"];
         
@@ -418,7 +427,9 @@
     
     
     @try {
-        NSDictionary *theResponse = [pubkey yajl_JSON];
+        JSONDecoder* decoder = [[JSONDecoder alloc]
+                                initWithParseOptions:JKParseOptionNone];
+        NSDictionary *theResponse = [decoder objectWithData:pubkey];
         
         NSString *theKey = [theResponse objectForKey:@"pubkey"];
         
@@ -475,7 +486,7 @@
         }
         }
      
-    NSString *enviromentAsString = [environment yajl_JSONString];
+    NSString *enviromentAsString = [environment JSONString];
          
 	[httpClient putURI:[uri stringByAppendingPathComponent:@"/environment"]
 			   payload:[enviromentAsString dataUsingEncoding:NSUTF8StringEncoding] 
