@@ -25,15 +25,14 @@
 @synthesize theNavBar;
 @synthesize theNavItem;
 @synthesize signInButton;
-@synthesize songTableView,resultArray,selectedKind,selectedItems,gestureInt,currentSongTimer,infoHud,sectionHeader,tableHeader,selectedTrack,currentPartySlug,currentSongId;
+@synthesize songTableView,resultArray,selectedKind,selectedItems,currentSongTimer,infoHud,sectionHeader,tableHeader,selectedTrack,currentPartySlug,currentSongId;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         selectedItems = [NSMutableArray arrayWithCapacity:10];
-        gestureInt = [[GesturesInterpreter alloc] init];
-        gestureInt.delegate = self;
+      
        
     }
     return self;
@@ -66,7 +65,6 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-      [gestureInt setDelegate:self];
 
     
     [[DeezerSession sharedSession] setRequestDelegate:self];
@@ -99,7 +97,6 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [[DeezerSession sharedSession] setRequestDelegate:nil];
     [[DeezerSession sharedSession] setConnectionDelegate:nil];
-    [gestureInt setDelegate:nil];
     [self.currentSongTimer invalidate];
     self.currentSongTimer = nil;
 }
@@ -275,9 +272,6 @@
 }
 # pragma mark  GesturesInterpreterDelegate
 
-- (void)gesturesInterpreterDidDetectThrow:(GesturesInterpreter *)aGestureInterpreter {
-    [self sendSelectedSongs];
-}
 
 - (IBAction)sendButtonTapped:(id)sender {
     [self sendSelectedSongs];
